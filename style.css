@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.wheel {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transform: rotate(0deg);
+    transition: transform 7s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+:root {
+	--size-wheel: 25rem;
+}
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.msg {
+	min-height: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 1rem;
+	text-transform: capitalize;
+}
+
+ul {
+	position: relative;
+	padding: 0;
+	margin: 1rem 0;
+	width: var(--size-wheel);
+	height: var(--size-wheel);
+	border: 10px solid rgb(0, 12, 184);
+	border-radius: 50%;
+	list-style: none;
+	overflow: hidden;
+	transition: cubic-bezier(0.075, 0.8, 0.2, 1) 7s;
+}
+
+span {
+	display: inline-block;
+	position: relative;
+	padding: 0.5rem;
+}
+
+span::before {
+	content: '';
+	position: absolute;
+	top: 0rem;
+	left: 50%;
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+	border-top: 2rem solid rgb(255, 0, 0);
+	z-index: 2;
+	transform: translateX(-50%);
+	animation: arrow ease-out 0.6s infinite;
+}
+
+@keyframes arrow {
+	0% {
+		top: -1rem;
+	}
+	80% {
+		top: 0;
+	}
+	100% {
+		top: -0.5rem;
+	}
+}
+
+span::after {
+    content: '';
+    width: 1.5rem; /* Giảm kích thước từ 2rem xuống 1.5rem */
+    height: 1.5rem; /* Giảm kích thước từ 2rem xuống 1.5rem */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%; /* Giữ hình tròn */
+}
+
+
+li {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	transform-origin: 0% 100%;
+}
+
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	left: -100%;
+	width: 200%;
+	height: 200%;
+	display: block;
+	text-align: center;
+	padding-top: 1.7rem;
+	font-weight: 600;
+	color: #fff;
+}
+
+.text > b {
+	display: inline-block;
+	word-break: break-word;
+	max-width: 20%;
+}
+
+.text-1 {
+	background-color: rgb(0, 89, 255);
+}
+
+.text-2 {
+	background-color: rgb(126, 182, 255);
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+button {
+	display: inline-block;
+	text-align: center;
+	border: 0;
+	background-color: #333;
+	color: #fff;
+	font-size: 1.5rem;
+	border-radius: 4rem;
+	padding: 0.5rem 1.5rem;
+	width: auto;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	opacity: 0.8;
+}
