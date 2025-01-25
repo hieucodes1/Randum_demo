@@ -13,7 +13,7 @@
 	const listGift = [
 		{
 			text: '5k',
-			percent: 20 / 100,
+			percent: 25 / 100,
 		},
 		{
 			text: '10k',
@@ -21,11 +21,11 @@
 		},
 		{
 			text: '20k',
-			percent: 20 / 100,
+			percent: 25 / 100,
 		},
 		{
 			text: '50k',
-			percent: 10 / 100,
+			percent: 0 / 100,
 		},
 		{
 			text: '100k',
